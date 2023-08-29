@@ -1,0 +1,15 @@
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid grey;
+    padding: 5px;
+    text-align: center;
+}
+
+.news {
+    margin: 10px;
+    padding: 5px;
+    background-color: #ccc;
+}

@@ -1,0 +1,35 @@
+body{
+    background-color: #D3E9F9}
+
+.container-fluid{
+    background-color: lightgray;
+    align-items: end;
+    height: 150px;
+}
+
+.menu-item{
+    color: blue;
+    display: inline;
+    font-size: 25px;
+    justify-content:right;
+}
+
+.footer{
+    background-color: lightgray;
+    height: 100px;
+    margin-top: 150px
+}
+
+.content{
+    display: flex;
+}
+
+.item{
+    width: 400px;
+    height: 400px;
+    border: 1px solid blue;
+}
+
+.item-flex{
+    display:flex;
+}

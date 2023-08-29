@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>students</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>{{firstname}}</td>
+        <td>{{lastname}}</td>
+        <td>{{age}}</td>
+        <td>{{rating}}</td>
+    </tr>
+    {% for student in students_list %}
+    <tr>
+        <td>{{student.firstname}}</td>
+        <td>{{student.lastname}}</td>
+        <td>{{student.age}}</td>
+        <td>{{student.rating}}</td>
+    </tr>
+    {%endfor%}
+</table>
+</body>
+</html>

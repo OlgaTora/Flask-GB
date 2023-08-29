@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    {% block title %}
+    <title>Shopping centre BIG MALL</title>
+    {% endblock %}
+</head>
+<body>
+    <div class="container-fluid">
+        <ul class="menu">
+            <li class="menu-item"><a href="/shoes/"
+                                    class="nav-link">Shoes</a></li>
+            <li class="menu-item"><a href="/outerwear/"
+                                    class="nav-link">Outerwear</a></li>
+            <li class="menu-item"><a href="/accessories/"
+                                    class="nav-link">Accessories</a></li>
+        </ul>
+</div>
+    {% block content %}
+    <div class="content">
+        <div class="container item-flex">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+    {% endblock %}
+
+<div class="footer">Contact us:</div>
+</body>
+</html>
