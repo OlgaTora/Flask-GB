@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'index.html' %}
 
-</body>
-</html>
+
+{% block content %}
+<h1>Look at our new accessories!</h1>
+    <div class="content">
+        <div class="container item-flex">
+            <div class="item">
+                <img src="/static/images/IMG_9787.JPG">
+            </div>
+            <div class="item">
+                <img src="/static/images/IMG_9788.JPG">
+            </div>
+            <div class="item">
+                <img src="/static/images/IMG_9789.JPG">
+            </div>
+        </div>
+    </div>
+{% endblock %}

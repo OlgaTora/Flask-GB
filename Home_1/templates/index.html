@@ -9,7 +9,7 @@
     {% endblock %}
 </head>
 <body>
-    <div class="container-fluid">
+<div class="header">
         <ul class="menu">
             <li class="menu-item"><a href="/shoes/"
                                     class="nav-link">Shoes</a></li>
@@ -22,13 +22,31 @@
     {% block content %}
     <div class="content">
         <div class="container item-flex">
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <div class="item">
+                <img src="/static/images/IMG_9790.JPG">
+            </div>
+            <div class="item">
+                <img src="/static/images/IMG_9791.JPG">
+            </div>
+            <div class="item">
+                <img src="/static/images/IMG_9792.JPG">
+            </div>
+        </div>    
+    </div>
+
+    <div class="content">            
+        <div class="container item-flex text">
+            <div class="item text">Model Espanola Precioca</div>
+            <div class="item text">Model Linda Increible</div>
+            <div class="item text">Model Klava NoShiffer</div>
         </div>
     </div>
     {% endblock %}
 
-<div class="footer">Contact us:</div>
+<div class="footer">Contact us:<br/>Spain, Madrid, 
+123456 Avenida de Raul 55<br/>telephone: 12345678<br/>
+e-mail: lalala@moda.es</div>
+
+
 </body>
 </html>
