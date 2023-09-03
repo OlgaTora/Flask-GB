@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{task}}
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <textarea name="text" placeholder="Text" rows="5" cols="30"></textarea>
+    <input type="submit" value="PUSH ME">
+</form>
+{% endblock %}

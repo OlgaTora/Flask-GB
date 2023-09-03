@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{task}}
+{% endblock %}
+
+{% block content %}
+<form class = "form_auth_style" action="#" method="post">
+    <label>Input login</label>
+    <input type="text" name="name" placeholder="Login" required>
+    <label>Input password</label>
+    <input type="text" name="password" placeholder="Password" required>
+    <button class="form_auth_button" type="submit" name="form_auth_submit">Lets go</button>
+</form>
+{% endblock %}

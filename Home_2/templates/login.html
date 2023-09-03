@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block title %}
+This is a page - {{page}}
+{% endblock %}
+
+{% block content %}
+<form class="form_login" action="#" method="post">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="container">
+        <label>Input login</label>
+        <input type="text" name="username" placeholder="place for your login" required>
+        <label>Input mail</label>
+        <input type="text" name="mail" placeholder="place for your email" required>
+        <button class="auth_button" type="submit" name="form_auth_submit">Let's go!</button>
+    </div>
+</form>
+{% endblock %}

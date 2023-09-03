@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{task}}
+{% endblock %}
+
+{% block content %}
+<form action="#" method="post">
+    <input type="number" name="number_1" placeholder="First Number">
+    <input type="number" name="number_2" placeholder="Second Number">
+    <p><input type="radio" name="oper" value="+">Summa</p>
+    <p><input type="radio" name="oper" value="-">Subtract</p>
+    <p><input type="radio" name="oper" value="/">Division</p>
+    <p><input type="radio" name="oper" value="*">Multiply</p>
+    <input type="submit" value="PUSH">
+</form>
+{% endblock %}

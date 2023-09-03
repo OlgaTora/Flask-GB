@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    {% block title %}
+    <title>Roger's Universal</title>
+    {% endblock %}
+</head>
+<body>
+<div class="header">
+    <ul class="menu">
+        <li class="menu-item"><a href="/login/"
+                                 class="nav-link">Login</a></li>
+        <li class="menu-item"><a href="/logout/"
+                                 class="nav-link">Logout</a></li>
+    </ul>
+</div>
+
+{% block content %}
+<h1>If you want to see Rodger's Universal, please, log in!</h1>
+<img src="{{ url_for('static', filename='images/roger.png') }}" width="300px">
+{% endblock %}
+
+<div class="footer">Here you are in Roger's footer</div>
+
+
+</body>
+</html>
