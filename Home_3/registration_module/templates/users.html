@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block content %}
+{% for user in users %}
+<div class="row">
+    <p class="show-users">User{{user.id}}: {{ user }}</p>
+</div>
+{% endfor %}
+{% endblock %}

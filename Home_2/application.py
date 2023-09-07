@@ -13,7 +13,6 @@ app.secret_key = '8f1e4cde6804c8b204b3d7b903f1d24d58a97994ea0b0d60cc5be23dd524f2
 @app.route('/')
 def index():
     if 'username' in session:
-        print(f'{session["username"]} = what')
         return redirect(url_for('hello', username=f'{session["username"]}'))
     else:
         return render_template('index.html')

@@ -1,0 +1,6 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1>Welcome to Rodger's Universal, {{username}} </h1>
+<img src="{{ url_for('static', filename='images/roger.png') }}" width="300px">
+{% endblock %}
