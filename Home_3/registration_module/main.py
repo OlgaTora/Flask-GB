@@ -8,7 +8,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'cc1a72c6a9c3a2a6ee88614f773c6f89e8011f7699073efe09f513186ebc6302'
 csrf = CSRFProtect(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config[
+    'SQLALCHEMY_DATABASE_URI'] = \
+    'sqlite:////home/olgatorres/PycharmProjects/Flask/Home_3/registration_module/instance/users.db'
 db.init_app(app)
 
 

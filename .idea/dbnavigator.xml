@@ -13,7 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="f9938c40-9537-49e0-9824-b2e66715b647">
-      <console name="Connection 1" type="STANDARD" schema="main" session="Main" />
+      <console name="Connection 1" type="STANDARD" schema="main" session="Main"><![CDATA[select * from user;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -65,7 +65,7 @@
           <tns-folder value="" />
           <tns-profile value="" />
           <files>
-            <file path="$PROJECT_DIR$/instance/users.db" schema="main" />
+            <file path="$PROJECT_DIR$/Home_3/registration_module/instance/users.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
