@@ -25,8 +25,8 @@ urls = ['https://gb.ru/_nuxt/img/6c757d5.png',
         'https://sypalo.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsergey-and-jane-sypalo.c53803b4.jpg&w=640&q=75',
         'https://img4.traektoria.ru/upload/trk_iblock_img/0aa/tr5hbho7v6crld3cbxnlkb6omg3aiaj2.jpg',
         'https://sun30-1.userapi.com/impg/utsP44UcvVdi8CkqeQT4-28ASVv4skT5pEYTzA/-m8i3127h-Y.jpg?size=604x243&quality'
-        '=96&sign=241d86db6d4d600ebbfbd99baec0735b&c_uniq_tag=GQFmKBi_Dumds-ru5BZWbBBey_B1OvAvIpcobdnEXLs&type=album'
-        ]
+        '=96&sign=241d86db6d4d600ebbfbd99baec0735b&c_uniq_tag=GQFmKBi_Dumds-ru5BZWbBBey_B1OvAvIpcobdnEXLs&type=album',
+        'https://cdnn21.img.ria.ru/images/07e7/09/0a/1895369908_0:0:3180:1789_640x0_80_0_0_d20b056e0afa24a0decfaa4ec01eaef9.jpg.webp']
 
 extensions = ['png', 'jpg', 'jpeg', 'pct', 'pict', 'bmp', 'gif', 'tiff']
 
@@ -43,14 +43,13 @@ def get_filename(url: str) -> str | None:
         print(f'This URL {url} dont contain picture')
     return filename
 
-
 def download_pic(url: str):
     response = requests.get(url)
     filename = get_filename(url)
     if filename:
         with open(filename, 'wb') as file:
             file.write(response.content)
-            print(f'{url} download in {time.time() - start_time:.4f} seconds')
+        print(f'{url} download in {time.time() - start_time:.4f} seconds')
 
 
 async def a_download_pic(url: str):
@@ -61,7 +60,7 @@ async def a_download_pic(url: str):
             if filename:
                 with open(filename, 'wb') as file:
                     file.write(content)
-    print(f'{url} download in {time.time() - start_time:.4f} seconds')
+                print(f'{url} download in {time.time() - start_time:.4f} seconds')
 
 
 async def main():
