@@ -11,8 +11,8 @@ class BirthdayValidator:
     def __call__(self, form, field):
         data = field.data
         if data > dt.datetime.today().date():
-            self.message = field.gettext('Date of birth cant be more than today')
+            self.message = field.gettext("Date of birth cant be more than today")
             raise ValidationError(self.message)
         if data < dt.datetime(1900, 1, 1).date():
-            self.message = field.gettext('Date of birth cant be less than 01-01-1900')
+            self.message = field.gettext("Date of birth cant be less than 01-01-1900")
             raise ValidationError(self.message)

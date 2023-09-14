@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+
 db = SQLAlchemy()
 
 
@@ -12,8 +13,10 @@ class User(db.Model):
     password = db.Column(db.String(80), nullable=False)
 
     def __repr__(self):
-        return (f'name: {self.username},'
-                f' surname: {self.surname},'
-                f' email: {self.email},'
-                f' birthday: {self.birthday},'                
-                f' {self.password}')
+        return (
+            f"name: {self.username},"
+            f" surname: {self.surname},"
+            f" email: {self.email},"
+            f" birthday: {self.birthday},"
+            f" {self.password}"
+        )

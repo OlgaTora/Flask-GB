@@ -1,0 +1,27 @@
+title{
+    color: silver;
+    font-size: 35px;
+}
+
+body{
+    background-color: lightgray;}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.auth_button{
+    padding: 16px;
+    cursor: pointer;
+    font-size: 25px;
+    color: red;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+}

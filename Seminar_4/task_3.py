@@ -8,25 +8,27 @@
 import asyncio
 import aiohttp
 
-urls = ['https://www.google.ru/',
-        'https://gb.ru/',
-        'https://ya.ru/',
-        'https://www.python.org/',
-        'https://habr.com/ru/all/',
-        ]
+urls = [
+    "https://www.google.ru/",
+    "https://gb.ru/",
+    "https://ya.ru/",
+    "https://www.python.org/",
+    "https://habr.com/ru/all/",
+]
 
 
 async def read_url(url: str):
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             text = await response.text()
-            filename = ('uploads/acync_' +
-                        url.replace('https://', '').
-                        replace('.', '').
-                        replace('/', '_') + '.html')
-            with open(filename, 'w', encoding='utf-8') as file:
+            filename = (
+                "uploads/acync_"
+                + url.replace("https://", "").replace(".", "").replace("/", "_")
+                + ".html"
+            )
+            with open(filename, "w", encoding="utf-8") as file:
                 file.write(text[:50])
-                print(f'{url} download')
+                print(f"{url} download")
 
 
 async def main():
@@ -37,5 +39,5 @@ async def main():
     await asyncio.gather(*tasks)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     asyncio.run(main())

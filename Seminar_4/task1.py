@@ -10,23 +10,25 @@
 import threading
 import requests
 
-urls = ['https://www.google.ru/',
-        'https://gb.ru/',
-        'https://ya.ru/',
-        'https://www.python.org/',
-        'https://habr.com/ru/all/',
-        ]
+urls = [
+    "https://www.google.ru/",
+    "https://gb.ru/",
+    "https://ya.ru/",
+    "https://www.python.org/",
+    "https://habr.com/ru/all/",
+]
 
 
 def read_url(url: str):
     response = requests.get(url)
-    filename = ('uploads/thread_' +
-                url.replace('https://', '').
-                replace('.', '').
-                replace('/', '_') + '.html')
-    with open(filename, 'w', encoding='utf-8') as file:
+    filename = (
+        "uploads/thread_"
+        + url.replace("https://", "").replace(".", "").replace("/", "_")
+        + ".html"
+    )
+    with open(filename, "w", encoding="utf-8") as file:
         file.write(response.text[:50])
-        print(f'{url} download')
+        print(f"{url} download")
 
 
 threads = []
