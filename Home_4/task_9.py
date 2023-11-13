@@ -11,6 +11,8 @@
 Добавлена возможность скачивать картинки с адресов, где сама картинка вшита внутри адреса.
 Добавлена проверка на расширение картинок.
 """
+from __future__ import annotations
+
 import argparse
 import asyncio
 import time
